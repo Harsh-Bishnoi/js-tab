@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TABS</title>
+    <link rel="stylesheet" href="./assests/css/style.css">
+</head>
+
+<body>
+    <section class="d-flex min-vh-100 justify-content-center justify-item-center align-item-center">
+        <div class="container">
+            <div class="head">Tabs</div>
+            <div class="card">
+                <div class="d-flex align-item-center gap-22">
+                    <div class="tab active" onclick="openTab(event, 'tab-1')">Tab-1</div>
+                    <div class="tab" onclick="openTab(event,'tab-2')">Tab-2</div>
+                    <div class="tab" onclick="openTab(event,'tab-3')">Tab-3</div>
+                </div>
+                <hr class="line">
+                <div class="tabPara active" id="tab-1">
+                    <p class="paragraph pt-22">Massa, at est sit laoreet. Pellentesque sed habitasse nulla leo arcu
+                        quam. Tincidunt magnis dis odio at. Viverra a, id amet massa metus eros. Sed donec scelerisque
+                        id neque, mauris id ultricies auctor dui. Auctor maecenas scelerisque eu orci viverra volutpat.
+                        In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin lacus. Orci, egestas porta
+                        nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.</p>
+                    <p class="paragraph pt-13">Massa, at est sit laoreet. Pellentesque sed habitasse nulla leo arcu
+                        quam. Tincidunt magnis dis odio at. Viverra a, id amet massa metus eros. Sed donec scelerisque
+                        id neque, mauris id ultricies auctor dui. Auctor maecenas scelerisque eu orci viverra volutpat.
+                        In dui justo, metus dolor. Mauris nibh at diam ipsum sollicitudin lacus. Orci, egestas porta
+                        nulla sed. Arcu mauris id bibendum habitant hendrerit semper vel.</p>
+                </div>
+
+
+                <div class="tabPara" id="tab-2">
+                    <p class="paragraph pt-22">The European languages are members of the same family. Their separate
+                        existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The
+                        languages only differ in their grammar, their pronunciation and their most common words.
+                        Everyone realizes why a new common language would be desirable: one could refuse to pay
+                        expensive translators. To achieve this, it would be necessary.
+                    </p>
+                    <p class="paragraph pt-13">The European languages are members of the same family. Their separate
+                        existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The
+                        languages only differ in their grammar, their pronunciation and their most common words.
+                        Everyone realizes why a new common language would be desirable: one could refuse to pay
+                        expensive translators. To achieve this, it would be necessary.</p>
+                </div>
+
+
+                <div class="tabPara" id="tab-3">
+                    <p class="paragraph pt-22">Far far away, behind the word mountains, far from the countries Vokalia
+                        and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
+                        coast of the Semantics, a large language ocean. A small river named Duden flows by their place
+                        and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted
+                        parts of sentences fly into your mouth.
+                    </p>
+                    <p class="paragraph pt-13">Far far away, behind the word mountains, far from the countries Vokalia
+                        and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the
+                        coast of the Semantics, a large language ocean. A small river named Duden flows by their place
+                        and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted
+                        parts of sentences fly into your mouth.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function openTab(event, tabId) {
+            const tabButtons = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tabPara');
+
+            tabButtons.forEach(tab => tab.classList.remove('active'));
+            tabContents.forEach(tabPara => tabPara.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
